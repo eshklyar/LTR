@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="RootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="otC-SV-dbJ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="R8e-h5-uIS" kind="embed" id="3rJ-K9-O8L"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zBL-y1-iXD">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="pC0-ML-Vtu" kind="embed" id="UiJ-eM-RMf"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="zBL-y1-iXD" secondAttribute="bottom" id="9qe-AV-f4J"/>
+                            <constraint firstItem="zBL-y1-iXD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Dgt-2D-UBA"/>
+                            <constraint firstAttribute="trailing" secondItem="zBL-y1-iXD" secondAttribute="trailing" id="Oeq-ou-0Os"/>
+                            <constraint firstItem="zBL-y1-iXD" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="QD3-Dq-WHl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="leftPhotoContrain" destination="Dgt-2D-UBA" id="li3-GX-Huu"/>
+                        <outlet property="rightPhotoContrain" destination="Oeq-ou-0Os" id="IiZ-vq-pxd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Photos View Controller-->
+        <scene sceneID="wtE-bu-7Jz">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="5mG-J8-jiM" customClass="PhotosViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lsm-aX-TKP"/>
+                        <viewControllerLayoutGuide type="bottom" id="pXj-Uy-SGV"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Wht-se-Dhr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="tTz-xK-pni">
+                        <barButtonItem key="leftBarButtonItem" title="menu" id="H6T-5Z-cae">
+                            <connections>
+                                <action selector="onMenuBarBtnItemTapped:" destination="5mG-J8-jiM" id="YrR-dM-Lfr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nym-eL-Qec" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="905" y="1114"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="L7A-W0-1GS">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="R8e-h5-uIS" customClass="MenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zcz-1h-GF6"/>
+                        <viewControllerLayoutGuide type="bottom" id="O3e-U7-iK0"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cNy-9N-dCn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcM-Jj-noK">
+                                <rect key="frame" x="126" y="79" width="132" height="70"/>
+                                <state key="normal" title="Lions">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLionsBtnPressed:" destination="R8e-h5-uIS" eventType="touchUpInside" id="Ncq-iL-VZJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nct-6u-lRp">
+                                <rect key="frame" x="131" y="240" width="127" height="44"/>
+                                <state key="normal" title="Tigers">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTigersBtnPressed:" destination="R8e-h5-uIS" eventType="touchUpInside" id="MMU-ar-wIy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X9F-bN-AEN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1546" y="1114"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zQj-07-HFd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pC0-ML-Vtu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I43-aL-fXG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5mG-J8-jiM" kind="relationship" relationship="rootViewController" id="SxD-g6-hp0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rfk-HF-03M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93" y="1114"/>
+        </scene>
+    </scenes>
+</document>
