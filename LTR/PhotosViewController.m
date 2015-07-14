@@ -7,16 +7,21 @@
 //
 
 #import "PhotosViewController.h"
+#import "CustomCollectionViewCell.h"
+#import "MenuViewController.h"
 
-@interface PhotosViewController ()
+@interface PhotosViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, MenuDelegate>
+@property (strong, nonatomic) NSMutableArray *currentPhotosArray;
 
 @end
 
 @implementation PhotosViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    //    self.currentPhotosArray = [[NSMutableArray alloc]init];
 }
 
 
@@ -30,12 +35,49 @@
 }
 */
 - (IBAction)onMenuBarBtnItemTapped:(id)sender {
-    [self.delegate topRevealButtonTapped];
-//    NSLog(@"delegate");
+    BOOL tap = true;
+    [self.delegate topRevealButtonTapped:tap];
+    NSLog(@"delegate");
 }
 
 //-(void)topRevealButtonTapped{
 //
 //}
 
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+
+    return self.currentPhotosArray.count;
+}
+
+-(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+
+    CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CustomCollectionViewCell"  forIndexPath:indexPath];
+    UIImageView *photoImageView = [[UIImageView alloc]init];
+    photoImageView.image=self.currentPhotosArray[indexPath.row];
+//    [UIImage imageNamed:@"arrow2.png"];
+    [cell addSubview:photoImageView];
+//    [cell.photoImageView initWithImage:self.currentPhotosArray[indexPath.row]];
+
+    cell.backgroundColor = [UIColor greenColor];
+//     [cell.textLabel];
+    return cell;
+    
+}
+-(void)lionsButtonTapped{
+
+    self.currentPhotosArray = [[NSMutableArray alloc] init];
+
+    //build array of images, cycling through image names
+//    int i;
+    for(int i=1; i<4; i++){
+        [self.currentPhotosArray addObject:[UIImage imageNamed:[NSString stringWithFormat:@"lion%d%d.png",2, i]]];
+    }
+    NSLog(@"number of images in the array %lu", (unsigned long)self.currentPhotosArray.count);
+}
 @end

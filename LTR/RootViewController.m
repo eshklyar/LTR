@@ -12,7 +12,7 @@
 @interface RootViewController () <PhotoDelegate>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftPhotoContrain;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *rightPhotoContrain;
-@property PhotosViewController *photo;
+//@property PhotosViewController *photo;
 
 @end
 
@@ -20,17 +20,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.photo = [[PhotosViewController alloc]init];
-    self.photo.delegate = self;
-    // Do any additional setup after loading the view, typically from a nib.
+    PhotosViewController *photo = [[PhotosViewController alloc] init];
+
+//    UINavigationController *navVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
+//    PhotosViewController *photoVC = navVC.viewControllers[0];
+//    photoVC.delegate = self;
+
+
+    photo.delegate = self;
+    NSLog(@"viewdidload");
+
+    self.rightPhotoContrain.constant= 120;
+    self.leftPhotoContrain.constant = 20;
+
+    NSLog(@"constrain %f", self.rightPhotoContrain.constant);
+    NSLog(@"constrain %f", self.leftPhotoContrain.constant);
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
--(void)topRevealButtonTapped{
+-(void)topRevealButtonTapped:(BOOL)tap{
+    NSLog(@"tap, %d",tap);
 //    self.leftPhotoContrain = self.rightPhotoContrain;
+    self.leftPhotoContrain.constant +=30;
+    NSLog(@"executing");
+
     NSLog(@"change in constrain");
+        NSLog(@"constrain %f", self.leftPhotoContrain.constant);
+
+
 }
 @end

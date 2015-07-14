@@ -17,6 +17,7 @@
 		BC8576421B40A865000C9951 /* LTRTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8576411B40A865000C9951 /* LTRTests.m */; };
 		BC85764D1B40AAAD000C9951 /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC85764C1B40AAAD000C9951 /* PhotosViewController.m */; };
 		BC8576501B40AAC3000C9951 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC85764F1B40AAC3000C9951 /* MenuViewController.m */; };
+		BC9E660E1B4B3F65006E9653 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9E660D1B4B3F65006E9653 /* CustomCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		BC85764C1B40AAAD000C9951 /* PhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosViewController.m; sourceTree = "<group>"; };
 		BC85764E1B40AAC3000C9951 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		BC85764F1B40AAC3000C9951 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		BC9E660C1B4B3F65006E9653 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
+		BC9E660D1B4B3F65006E9653 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +94,11 @@
 			children = (
 				BC8576261B40A865000C9951 /* AppDelegate.h */,
 				BC8576271B40A865000C9951 /* AppDelegate.m */,
+				BC85762F1B40A865000C9951 /* Main.storyboard */,
 				BC85762C1B40A865000C9951 /* RootViewController.h */,
 				BC85762D1B40A865000C9951 /* RootViewController.m */,
-				BC85762F1B40A865000C9951 /* Main.storyboard */,
+				BC9E660C1B4B3F65006E9653 /* CustomCollectionViewCell.h */,
+				BC9E660D1B4B3F65006E9653 /* CustomCollectionViewCell.m */,
 				BC85764B1B40AAAD000C9951 /* PhotosViewController.h */,
 				BC85764C1B40AAAD000C9951 /* PhotosViewController.m */,
 				BC85764E1B40AAC3000C9951 /* MenuViewController.h */,
@@ -236,6 +241,7 @@
 				BC8576501B40AAC3000C9951 /* MenuViewController.m in Sources */,
 				BC8576281B40A865000C9951 /* AppDelegate.m in Sources */,
 				BC85762E1B40A865000C9951 /* RootViewController.m in Sources */,
+				BC9E660E1B4B3F65006E9653 /* CustomCollectionViewCell.m in Sources */,
 				BC85764D1B40AAAD000C9951 /* PhotosViewController.m in Sources */,
 				BC8576251B40A865000C9951 /* main.m in Sources */,
 			);
@@ -432,6 +438,7 @@
 				BC8576471B40A865000C9951 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC8576481B40A865000C9951 /* Build configuration list for PBXNativeTarget "LTRTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +447,7 @@
 				BC85764A1B40A865000C9951 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

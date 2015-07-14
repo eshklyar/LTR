@@ -9,14 +9,25 @@
 #import <UIKit/UIKit.h>
 
 
-@protocol PhotoDelegate
+@protocol PhotoDelegate <NSObject>
 
--(void)topRevealButtonTapped;
+-(void)topRevealButtonTapped:(BOOL)tap;
 
 @end
 
+//@protocol ImageLoadDelegate
+//
+//-(void)loadImages;
+//
+//@end
+
 @interface PhotosViewController : UIViewController
 
-@property id<PhotoDelegate> delegate;
+@property (weak, nonatomic) id<PhotoDelegate> delegate;
+
+//@end
+
+//@property id <ImageLoadDelegate> delegate;
+- (IBAction)onMenuBarBtnItemTapped:(id)sender ;
 
 @end
