@@ -24,6 +24,11 @@
     //    self.currentPhotosArray = [[NSMutableArray alloc]init];
 }
 
+-(void)helloDelegate {
+    // send message the message to the delegate!
+    [self.delegate sayHello];
+    NSLog(@"saying hello from the protocol");
+}
 
 /*
 #pragma mark - Navigation
@@ -36,6 +41,7 @@
 */
 - (IBAction)onMenuBarBtnItemTapped:(id)sender {
     BOOL tap = true;
+//    [self.delegate topRevealButtonTapped:tap];
     [self.delegate topRevealButtonTapped:tap];
     NSLog(@"delegate");
 }
@@ -47,24 +53,28 @@
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
 
-    return 1;
+    return 2;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
 
-    return self.currentPhotosArray.count;
+//    return self.currentPhotosArray.count;
+    return 1;
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
 
-    CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CustomCollectionViewCell"  forIndexPath:indexPath];
-    UIImageView *photoImageView = [[UIImageView alloc]init];
-    photoImageView.image=self.currentPhotosArray[indexPath.row];
+    CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CustomCollectionViewCell" forIndexPath:indexPath];
+cell.photoImageCustomView.image=self.currentPhotosArray[indexPath.row];
+
+
+//    UIImageView *photoImageView = [[UIImageView alloc]init];
+//    photoImageView.image=self.currentPhotosArray[indexPath.row];
 //    [UIImage imageNamed:@"arrow2.png"];
-    [cell addSubview:photoImageView];
+//    [cell addSubview:photoImageView];
 //    [cell.photoImageView initWithImage:self.currentPhotosArray[indexPath.row]];
 
-    cell.backgroundColor = [UIColor greenColor];
+//    cell.backgroundColor = [UIColor greenColor];
 //     [cell.textLabel];
     return cell;
     
@@ -79,5 +89,9 @@
         [self.currentPhotosArray addObject:[UIImage imageNamed:[NSString stringWithFormat:@"lion%d%d.png",2, i]]];
     }
     NSLog(@"number of images in the array %lu", (unsigned long)self.currentPhotosArray.count);
+}
+-(void)tigersButtonTapped{
+
+    NSLog(@"tigers");
 }
 @end

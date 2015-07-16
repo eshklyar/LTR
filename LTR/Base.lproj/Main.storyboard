@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="otC-SV-dbJ">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="otC-SV-dbJ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <connections>
                                     <segue destination="R8e-h5-uIS" kind="embed" id="3rJ-K9-O8L"/>
@@ -31,16 +31,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="zBL-y1-iXD" secondAttribute="bottom" id="9qe-AV-f4J"/>
-                            <constraint firstItem="zBL-y1-iXD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Dgt-2D-UBA"/>
-                            <constraint firstAttribute="trailing" secondItem="zBL-y1-iXD" secondAttribute="trailing" id="Oeq-ou-0Os"/>
-                            <constraint firstItem="zBL-y1-iXD" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="QD3-Dq-WHl"/>
+                            <constraint firstItem="otC-SV-dbJ" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="3Zz-19-t3U"/>
+                            <constraint firstAttribute="trailing" secondItem="zBL-y1-iXD" secondAttribute="trailing" id="79T-NU-eZZ"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="zBL-y1-iXD" secondAttribute="bottom" id="9fE-1X-cv1"/>
+                            <constraint firstItem="otC-SV-dbJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Nmq-nB-jAT"/>
+                            <constraint firstAttribute="trailing" secondItem="otC-SV-dbJ" secondAttribute="trailing" id="dWL-EJ-7u4"/>
+                            <constraint firstItem="zBL-y1-iXD" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="gME-XF-yXH"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="otC-SV-dbJ" secondAttribute="bottom" id="hAR-4D-Ydm"/>
+                            <constraint firstItem="zBL-y1-iXD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="nvN-80-csB"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="leftPhotoContrain" destination="Dgt-2D-UBA" id="li3-GX-Huu"/>
-                        <outlet property="rightPhotoContrain" destination="Oeq-ou-0Os" id="IiZ-vq-pxd"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,7 +59,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FGZ-q8-CXk">
-                                <rect key="frame" x="111" y="103" width="379" height="303"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="426"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qAT-n0-n0g">
                                     <size key="itemSize" width="150" height="157"/>
@@ -76,13 +76,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AMM-fn-2xp">
-                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="157"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="109"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJ8-56-TWo">
+                                                    <rect key="frame" x="0.0" y="117" width="150" height="40"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <outlet property="photoImage" destination="AMM-fn-2xp" id="B5b-oq-gVN"/>
+                                            <outlet property="hiLabel" destination="NJ8-56-TWo" id="dJu-hg-xD7"/>
+                                            <outlet property="photoImageCustomView" destination="AMM-fn-2xp" id="1Hq-MX-VUx"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

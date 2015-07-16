@@ -92,8 +92,6 @@
 		BC8576211B40A865000C9951 /* LTR */ = {
 			isa = PBXGroup;
 			children = (
-				BC8576261B40A865000C9951 /* AppDelegate.h */,
-				BC8576271B40A865000C9951 /* AppDelegate.m */,
 				BC85762F1B40A865000C9951 /* Main.storyboard */,
 				BC85762C1B40A865000C9951 /* RootViewController.h */,
 				BC85762D1B40A865000C9951 /* RootViewController.m */,
@@ -104,6 +102,8 @@
 				BC85764E1B40AAC3000C9951 /* MenuViewController.h */,
 				BC85764F1B40AAC3000C9951 /* MenuViewController.m */,
 				BC8576321B40A865000C9951 /* Images.xcassets */,
+				BC8576261B40A865000C9951 /* AppDelegate.h */,
+				BC8576271B40A865000C9951 /* AppDelegate.m */,
 				BC8576341B40A865000C9951 /* LaunchScreen.xib */,
 				BC8576291B40A865000C9951 /* LTR.xcdatamodeld */,
 				BC8576221B40A865000C9951 /* Supporting Files */,

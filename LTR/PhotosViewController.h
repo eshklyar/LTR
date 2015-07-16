@@ -12,6 +12,7 @@
 @protocol PhotoDelegate <NSObject>
 
 -(void)topRevealButtonTapped:(BOOL)tap;
+-(void)sayHello;
 
 @end
 
@@ -24,10 +25,11 @@
 @interface PhotosViewController : UIViewController
 
 @property (weak, nonatomic) id<PhotoDelegate> delegate;
+-(void)helloDelegate;
 
 //@end
 
 //@property id <ImageLoadDelegate> delegate;
-- (IBAction)onMenuBarBtnItemTapped:(id)sender ;
+//- (IBAction)onMenuBarBtnItemTapped:(id)sender ;
 
 @end
