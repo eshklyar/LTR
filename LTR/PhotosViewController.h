@@ -26,6 +26,7 @@
 
 @property (weak, nonatomic) id<PhotoDelegate> delegate;
 -(void)helloDelegate;
+-(void) onSecondTineBarBtn;
 
 //@end
 

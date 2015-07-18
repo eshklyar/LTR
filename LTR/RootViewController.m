@@ -23,6 +23,12 @@
 //    PhotosViewController *photo = [[PhotosViewController alloc] init];
     self.photo = [[PhotosViewController alloc] init];
 
+    UIButton *testButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    [testButton setTitle:@"TEST DELEGATE" forState:UIControlStateNormal  ];
+    [self.view addSubview:testButton];
+    [testButton addTarget:self action:@selector(onTestButtonTappd:) forControlEvents:UIControlEventTouchUpInside];
+
+
 //    UINavigationController *navVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
 //    NSLog(@"navVC, %@",navVC);
 //    PhotosViewController *photoVC = navVC.viewControllers[0];
@@ -33,6 +39,9 @@
 //    photoVC.delegate = self;
     self.photo.delegate = self;
     [self.photo helloDelegate];
+    [self.photo onSecondTineBarBtn];
+
+
 
 //    self.photo.delegate = self;
     NSLog(@"viewdidload");
@@ -42,6 +51,11 @@
 
     NSLog(@"constrain %f", self.rightPhotoContrain.constant);
     NSLog(@"constrain %f", self.leftPhotoContrain.constant);
+}
+
+- (IBAction)onTestButtonTappd:(id)sender
+{
+    NSLog(@"HIT TEST BUTTON");
 }
 
 //-(void)topRevealButtonTapped:(BOOL)tap{

@@ -39,6 +39,12 @@
     // Pass the selected object to the new view controller.
 }
 */
+-(void) onSecondTineBarBtn{
+    BOOL tap = true;
+    //    [self.delegate topRevealButtonTapped:tap];
+    [self.delegate topRevealButtonTapped:tap];
+    NSLog(@"delegate");
+}
 - (IBAction)onMenuBarBtnItemTapped:(id)sender {
     BOOL tap = true;
 //    [self.delegate topRevealButtonTapped:tap];
